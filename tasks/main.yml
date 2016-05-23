@@ -20,8 +20,8 @@
 - name: wait for vm to be up
   local_action: wait_for host={{ undercloud }} state=started
 
- - name: check that virthost provisioning mavtap device has ip address
-   command: >
+- name: check that virthost provisioning mavtap device has ip address
+  command: >
      ip link set {{ macvtap_devices.virthost_provisioning.macvtap_name }} up;
      ip link show {{ macvtap_devices.virthost_provisioning.macvtap_name }}
 

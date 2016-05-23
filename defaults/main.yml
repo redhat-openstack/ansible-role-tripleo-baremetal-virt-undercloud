@@ -1,2 +1,13 @@
 ---
 # defaults file for ansible-role-tripleo-baremetal-virt-undercloud
+macvtap_devices:
+  provisioning:
+    host_device: em2
+    macvtap_name: macvtap0
+    mac_address: 52:54:00:00:76:01
+    vm_interface: eth1
+  virthost_provisioning:
+    host_device: em1
+    macvtap_name: macvtap1
+    mac_address: 52:54:00:00:76:02
+    vm_interface: eth2
